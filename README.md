@@ -1,5 +1,7 @@
 本文旨在加深对前端知识点的理解，资料来源于网络，由本人(博客：http://segmentfault.com/u/trigkit4) 收集整理。
 
+> 1 小时 AI Coding / Harness AI 实习生面试任务见 [`ai-coding-interview/`](./ai-coding-interview/README.md)。
+
 
 
 #### 一些开放性题目
