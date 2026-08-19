@@ -4,12 +4,12 @@
 
 ## 背景
 
-`starter/` 是一个不依赖构建工具的 Issue 列表。逻辑在 `core.js`，页面在 `index.html` + `ui.js`。用本地 `localStorage` 存数据。
+本目录下的 `starter/` 是一个不依赖构建工具的 Issue 列表。逻辑在 `core.js`，页面在 `index.html` + `ui.js`。用本地 `localStorage` 存数据。
 
 ```bash
 cd starter
 npm test          # Node 18+ 即可，无第三方依赖
-# 用浏览器直接打开 index.html 也可手动点
+# 用浏览器直接打开 starter/index.html 也可手动点
 ```
 
 请尽量**保持现有导出函数名**（测试在用）。不要引入 React/Vue/打包器。
