@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Issue Board</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #111; }
+    body { max-width: 720px; margin: 24px auto; padding: 0 16px; }
+    h1 { font-size: 1.4rem; }
+    form, .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    input, select, button, textarea { font: inherit; padding: 6px 8px; }
+    textarea, input[name="title"], input[name="labels"] { width: 100%; }
+    .issue { border: 1px solid #ddd; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+    .issue.done { opacity: 0.7; }
+    .muted { color: #666; font-size: 0.85rem; }
+    .labels span { display: inline-block; background: #eee; border-radius: 4px; padding: 0 6px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Mini Issue Board</h1>
+  <div class="toolbar">
+    <input id="search" placeholder="搜索" />
+    <select id="status">
+      <option value="all">all</option>
+      <option value="open">open</option>
+      <option value="done">done</option>
+    </select>
+    <input id="label" placeholder="按 label 筛选" />
+  </div>
+  <form id="create">
+    <input name="title" placeholder="标题" required />
+    <textarea name="body" rows="3" placeholder="正文"></textarea>
+    <input name="labels" placeholder="labels，逗号分隔" />
+    <button type="submit">创建</button>
+  </form>
+  <div id="list"></div>
+  <script src="./core.js"></script>
+  <script src="./ui.js"></script>
+</body>
+</html>
